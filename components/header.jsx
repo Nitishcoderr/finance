@@ -38,7 +38,7 @@ const Header = async () => {
             <Button variant="default" className="flex items-center gap-2">
             <PenBox size={18} />
             <span className='hidden md:inline'>
-            Dashboard
+            Add Transaction
             </span>
             </Button>
             </Link>
