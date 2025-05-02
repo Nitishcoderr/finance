@@ -77,15 +77,18 @@ const CreateAccountDrawer = ({children}) => {
         </div>
         <div className="space-y-2">
             <label htmlFor="type" className='text-sm font-medium'>Account Type</label>
-            <Select onValueChange={(value)=>setValue("type",value)} defaultValue={watch("type")} >
-            <SelectTrigger className="w-full" id="type">
-              <SelectValue placeholder="Select Type" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="CURRENT">Current</SelectItem>
-              <SelectItem value="SAVING">Saving</SelectItem>
-            </SelectContent>
-            </Select>
+            <Select
+                onValueChange={(value) => setValue("type", value)}
+                defaultValue={watch("type")}
+              >
+                <SelectTrigger id="type">
+                  <SelectValue placeholder="Select type" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="CURRENT">Current</SelectItem>
+                  <SelectItem value="SAVINGS">Savings</SelectItem>
+                </SelectContent>
+              </Select>
             {
                 errors.type && (
                     <p className='text-sm text-red-500' >{errors.type.message}</p>
