@@ -47,7 +47,7 @@ import {
   
   export default function EmailTemplate({
     userName = "",
-    type = "budget-alert",
+    type = "monthly-report",
     data = {},
   }) {
     if (type === "monthly-report") {
@@ -90,7 +90,7 @@ import {
                     ([category, amount]) => (
                       <div key={category} style={styles.row}>
                         <Text style={styles.text}>{category}</Text>
-                        <Text style={styles.text}>${amount}</Text>
+                        <Text style={styles.text}> - ${amount}</Text>
                       </div>
                     )
                   )}
